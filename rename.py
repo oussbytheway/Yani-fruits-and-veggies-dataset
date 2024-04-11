@@ -1,7 +1,7 @@
 import os
 import glob
 
-base_dir = "val"
+base_dir = "train"
 
 for subdir in os.listdir(base_dir):
     subdir_path = os.path.join(base_dir, subdir)
@@ -15,7 +15,7 @@ for subdir in os.listdir(base_dir):
             extension = os.path.splitext(old_name)[1]
             
             # Generate the new file name
-            new_name = os.path.join(subdir_path, f"val-{i+1:03d}{extension}")
+            new_name = os.path.join(subdir_path, f"train-{i+1:03d}{extension}")
             
             # Rename the file
             os.rename(old_name, new_name)
